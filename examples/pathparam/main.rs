@@ -13,7 +13,7 @@ async fn main() {
     .unwrap();
 }
 
-async fn user_post(params: extract::Path<(str, str)>) -> String {
+async fn user_post(params: extract::Path<(u32, u32)>) -> String {
   let user_id = params.0;
   let post_id = params.1;
   format!("user_id: {:?}, post_id: {:?}", user_id, post_id)
